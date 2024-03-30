@@ -41,4 +41,14 @@ class VolunteerController extends Controller
         $postulation = Postulation::all()->where('user_id',$user);
         return response()->json($postulation);
     }
+
+    public function filtrage(Request $request)
+    {
+        $type = $request->input('type');
+
+        $annonces = Annonces::where('type', $type)->get();
+
+        return response()->json($annonces);
+
+    }
 }

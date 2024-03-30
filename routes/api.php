@@ -38,3 +38,4 @@ Route::delete('annonces/{id}', [\App\Http\Controllers\OrganizerController::class
 Route::get('allAnnonces', [\App\Http\Controllers\VolunteerController::class, 'allAnnonces']);
 Route::post('postule', [\App\Http\Controllers\VolunteerController::class, 'postule']);
 Route::get('myPostulate', [\App\Http\Controllers\VolunteerController::class, 'myPostulate']);
+Route::get('filtrage', [\App\Http\Controllers\VolunteerController::class, 'filtrage']);
